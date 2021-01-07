@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const articleData = await axios.get("http://localhost:5000/api/posts");
+      const articleData = await axios.get("/api/posts");
       setArticles(articleData?.data?.data);
     };
     fetchArticles();
