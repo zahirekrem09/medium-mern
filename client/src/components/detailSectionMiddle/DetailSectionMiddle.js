@@ -15,7 +15,7 @@ const DetailSectionMiddle = ({ singleArticle }) => {
   async function removeBookmark() {
     let token = localStorage.getItem("token");
     const undoLikeData = await axios.get(
-      `http://localhost:5000/api/posts/${singleArticle._id}/undolike`,
+      `/api/posts/${singleArticle._id}/undolike`,
       {
         headers: {
           "x-auth-token": token,
@@ -28,14 +28,11 @@ const DetailSectionMiddle = ({ singleArticle }) => {
 
   async function addBookmark() {
     let token = localStorage.getItem("token");
-    const likeData = await axios.get(
-      `http://localhost:5000/api/posts/${singleArticle._id}/like`,
-      {
-        headers: {
-          "x-auth-token": token,
-        },
-      }
-    );
+    const likeData = await axios.get(`/api/posts/${singleArticle._id}/like`, {
+      headers: {
+        "x-auth-token": token,
+      },
+    });
 
     setUserData({ user: likeData.data.currentUser, token });
   }

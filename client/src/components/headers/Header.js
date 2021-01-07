@@ -66,7 +66,7 @@ function Header(props) {
               Read and share ideas from independent voices, world-class
               publications, and experts from around the globe. Everyone's
               welcome.{" "}
-              <a href="#" style={{ textDecoration: "underline" }}>
+              <a href="/" style={{ textDecoration: "underline" }}>
                 Learn More
               </a>
             </p>

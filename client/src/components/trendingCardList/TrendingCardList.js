@@ -12,7 +12,7 @@ const TrendingCardList = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       const articleData = await axios.get(
-        "http://localhost:5000/api/posts?limit=6&sortBy=most-claps"
+        "/api/posts?limit=6&sortBy=most-claps"
       );
       //console.log(articleData.data.data);
       setTrends(articleData.data.data);

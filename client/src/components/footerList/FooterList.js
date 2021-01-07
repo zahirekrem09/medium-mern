@@ -16,7 +16,7 @@ const FooterList = () => {
       <a className="footerAnchors" href="/">
         Blog
       </a>
-      <a className="footerAnchors" href="#">
+      <a className="footerAnchors" href="/">
         Careers
       </a>
       <a className="footerAnchors" href="/">

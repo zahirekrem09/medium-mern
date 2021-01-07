@@ -20,26 +20,20 @@ const BigCard = (props) => {
   } = useContext(UserContext);
   async function removeBookmark() {
     let token = localStorage.getItem("token");
-    const undoLikeData = await axios.get(
-      `http://localhost:5000/api/posts/${props.id}/undolike`,
-      {
-        headers: {
-          "x-auth-token": token,
-        },
-      }
-    );
+    const undoLikeData = await axios.get(`/api/posts/${props.id}/undolike`, {
+      headers: {
+        "x-auth-token": token,
+      },
+    });
     setUserData({ user: undoLikeData.data.currentUser, token });
   }
   async function addBookmark() {
     let token = localStorage.getItem("token");
-    const likeData = await axios.get(
-      `http://localhost:5000/api/posts/${props.id}/like`,
-      {
-        headers: {
-          "x-auth-token": token,
-        },
-      }
-    );
+    const likeData = await axios.get(`/api/posts/${props.id}/like`, {
+      headers: {
+        "x-auth-token": token,
+      },
+    });
     setUserData({ user: likeData.data.currentUser, token });
   }
   function modalOpen() {

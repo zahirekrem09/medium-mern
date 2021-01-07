@@ -17,7 +17,7 @@ const DetailSectionLeft = ({ singleArticleLeft }) => {
   async function removeFollow() {
     let token = localStorage.getItem("token");
     const unFollowProfileData = await axios.get(
-      `http://localhost:5000/api/users/unfollow/${singleArticleLeft?.author?._id}`,
+      `/api/users/unfollow/${singleArticleLeft?.author?._id}`,
       {
         headers: {
           "x-auth-token": token,
@@ -30,7 +30,7 @@ const DetailSectionLeft = ({ singleArticleLeft }) => {
   async function addFollow() {
     let token = localStorage.getItem("token");
     const followProfileData = await axios.get(
-      `http://localhost:5000/api/users/follow/${singleArticleLeft?.author?._id}`,
+      `/api/users/follow/${singleArticleLeft?.author?._id}`,
       {
         headers: {
           "x-auth-token": token,
@@ -43,7 +43,7 @@ const DetailSectionLeft = ({ singleArticleLeft }) => {
   const handleClaps = async () => {
     let token = localStorage.getItem("token");
     const getClaps = await axios.get(
-      `http://localhost:5000/api/posts/${singleArticleLeft?._id}/claps`,
+      `/api/posts/${singleArticleLeft?._id}/claps`,
       { headers: { "x-auth-token": token } }
     );
 
@@ -57,7 +57,7 @@ const DetailSectionLeft = ({ singleArticleLeft }) => {
   useEffect(() => {
     const fetchUser = async () => {
       const userProfileData = await axios.get(
-        `http://localhost:5000/api/users/${singleArticleLeft?.author?._id}`
+        `/api/users/${singleArticleLeft?.author?._id}`
       );
       setUserProfile(userProfileData?.data?.data);
     };

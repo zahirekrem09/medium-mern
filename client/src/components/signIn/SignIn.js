@@ -44,20 +44,16 @@ const SignInForm = ({ openSignInModal, signInModalIsOpen }) => {
         password: values.password,
       };
 
-      const signResponse = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        newUser
-      );
+      const signResponse = await axios.post("/api/auth/login", newUser);
       console.log(signResponse);
       setUserData({
         user: signResponse?.data?.user,
         token: signResponse?.data?.access_token,
       });
       localStorage.setItem("token", signResponse?.data?.access_token);
-      const userResponse = await axios.get(
-        "http://localhost:5000/api/auth/user",
-        { headers: { "x-auth-token": signResponse.data.access_token } }
-      );
+      const userResponse = await axios.get("/api/auth/user", {
+        headers: { "x-auth-token": signResponse.data.access_token },
+      });
       history.push("/");
       openSignInModal();
     } catch (error) {
@@ -186,5 +182,4 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
     borderRadius: "10px",
   },
-  
 };

@@ -32,10 +32,9 @@ function App() {
     const userCheck = async () => {
       let token = localStorage.getItem("token");
       if (token) {
-        const userResponse = await axios.get(
-          "http://localhost:5000/api/auth/user",
-          { headers: { "x-auth-token": token } }
-        );
+        const userResponse = await axios.get("/api/auth/user", {
+          headers: { "x-auth-token": token },
+        });
         setUserData({ user: userResponse?.data?.user, token });
         setAuthToken(token);
       }

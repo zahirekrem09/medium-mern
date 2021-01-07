@@ -32,15 +32,11 @@ const PostEditor = () => {
       formData.append("topic", topic);
       formData.append("author", userData.user._id);
       let token = localStorage.getItem("token");
-      const postResponse = await axios.post(
-        "http://localhost:5000/api/posts/add",
-        formData,
-        {
-          headers: {
-            "x-auth-token": token,
-          },
-        }
-      );
+      const postResponse = await axios.post("/api/posts/add", formData, {
+        headers: {
+          "x-auth-token": token,
+        },
+      });
       setPost(postResponse.data.post);
       setContent("");
       setTitle("");

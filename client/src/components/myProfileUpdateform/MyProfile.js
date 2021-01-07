@@ -32,7 +32,7 @@ const MyProfileUpdateForm = ({ handleOnUpdateClose = () => {} }) => {
     let token = localStorage.getItem("token");
 
     const registerResponse = await axios.put(
-      "http://localhost:5000/api/profile/update",
+      "/api/profile/update",
       updatedUser,
       {
         headers: {

@@ -57,16 +57,12 @@ const RegisterForm = ({ modalIsOpen, closeModal }) => {
         lastName: values.lastName,
       };
 
-      const registerResponse = await axios.post(
-        "http://localhost:5000/api/auth/register",
-        newUser
-      );
+      const registerResponse = await axios.post("/api/auth/register", newUser);
       setUserData({ ...userData, token: registerResponse.data.access_token });
       localStorage.setItem("token", registerResponse.data.access_token);
-      const userResponse = await axios.get(
-        "http://localhost:5000/api/auth/user",
-        { headers: { "x-auth-token": registerResponse.data.access_token } }
-      );
+      const userResponse = await axios.get("/api/auth/user", {
+        headers: { "x-auth-token": registerResponse.data.access_token },
+      });
       setUserData({
         user: userResponse?.data?.user,
         token: registerResponse.data.access_token,
