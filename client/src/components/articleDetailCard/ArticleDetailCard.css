@@ -1,0 +1,30 @@
+.articleDetailImage{
+    width: 100%;
+}
+
+.all-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-icons-left{
+    display: flex;
+    align-items: center;
+}
+.all-icons-right{
+    display: flex;
+}
+
+.readMore{
+    color: #1a8917;
+    font-style: italic;
+    font-weight: 500;
+}
+.article-detail-container{
+    margin-bottom: 12%;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 3%;
+    text-align: left;
+
+}

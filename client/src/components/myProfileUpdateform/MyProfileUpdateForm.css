@@ -1,0 +1,50 @@
+.profileFormContainer {
+  /* width: 10%; */
+}
+
+.profileFormInputContainer {
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.profileUpdateInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin-top: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: 0.3s ease-in-out;
+  padding-bottom: 3px ;
+}
+.profileFormAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.imageUpload {
+  position: absolute;
+  cursor: pointer;
+  top: 60px;
+  left: 60px;
+  z-index: 999;
+}
+
+.update-btn {
+  height: 40px;
+  color: #1a8917;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #1a8917;
+  cursor: pointer;
+  padding: 2% 4%;
+}
+
+.update-btn:hover {
+  background-color: #1a8917;
+  color: white;
+}

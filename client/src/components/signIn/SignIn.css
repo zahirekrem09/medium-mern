@@ -1,0 +1,70 @@
+.signInForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signInInput {
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: 0.3s ease-in-out;
+}
+
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh;
+}
+
+.modalSignIn {
+  width: 40%;
+  background-color: #ffc017;
+  padding: 1vh;
+  border-radius: 10px;
+  outline: none;
+  border-style: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 2vh;
+  align-self: center;
+}
+
+.modalSignIn:hover {
+  background-color: white;
+  color: #ffc017;
+
+  border: 1px solid #ffc017;
+}
+
+.createOneBtn {
+  color: #1a8917;
+}
+.error {
+  margin-top: 8px;
+  color: red;
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+
+/* 
+@media only screen and (max-width: 700px){
+  .modalSignIn {
+    width: 80%;
+  }
+  .signInContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh;
+    width: 80%;
+  }
+  
+} */
