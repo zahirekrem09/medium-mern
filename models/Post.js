@@ -102,7 +102,7 @@ PostSchema.pre("save", function (next) {
     next();
   }
   this.slug = this.makeSlug(this.title);
-  this.formatDate = moment(Date.now()).format("MMM D");
+  this.formatDate = moment(Date.now()).format("MMM D YYYY");
   next();
 });
 

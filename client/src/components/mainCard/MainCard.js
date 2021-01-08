@@ -17,7 +17,7 @@ const MainCard = () => {
       </div>
       <div className="main-text-container">
         <Link to={`/profileDetail/${articles && articles[0]?.author._id}`}>
-          <div className="main-username">
+          <div className="main-username-container">
             <img
               className="mainCardProfileImage"
               src={articles && articles[0]?.author.avatar_img}
@@ -25,7 +25,7 @@ const MainCard = () => {
               height="20"
               alt=""
             ></img>
-            <span>
+            <span className="main-username">
               {(articles && articles[0]?.author?.firstName) +
                 " " +
                 (articles && articles[0]?.author?.lastName)}

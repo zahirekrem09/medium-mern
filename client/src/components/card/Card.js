@@ -7,13 +7,13 @@ const Card = (props) => {
     <div className="card-container">
       <div className="text-container">
         <Link to={`/profileDetail/${props.authorId}`}>
-          <div className="username">
+          <div className="usernameContainer">
             <img
               className="card-profileImage"
               src={props.profileImage}
               alt=""
             />
-            {props.username}
+            <span className="username">{props.username}</span>
           </div>
         </Link>
         <Link to={`/articleDetail/${props.id}`}>
