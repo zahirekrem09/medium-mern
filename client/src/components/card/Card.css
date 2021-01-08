@@ -23,7 +23,7 @@
 
 .username {
   font-size: smaller;
-  padding-bottom: 8px;
+  /* padding-bottom: 8px; */
 }
 .card-profileImage {
   width: 20px;

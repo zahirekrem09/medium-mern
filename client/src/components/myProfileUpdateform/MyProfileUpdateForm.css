@@ -1,7 +1,17 @@
 .profileFormContainer {
   /* width: 10%; */
 }
-
+/* .modal_content {
+  background-color: #1a8917;
+  width: 35%;
+  height: auto;
+  top: 45%;
+  left: 45%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+} */
 .profileFormInputContainer {
   margin-bottom: 3%;
   display: flex;
@@ -17,7 +27,7 @@
   border: none;
   border-bottom: 2px solid #ccc;
   transition: 0.3s ease-in-out;
-  padding-bottom: 3px ;
+  padding-bottom: 3px;
 }
 .profileFormAvatar {
   width: 100px;

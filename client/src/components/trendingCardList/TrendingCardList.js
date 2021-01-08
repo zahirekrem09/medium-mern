@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TrendingCard from "../trendingCard/TrendingCard";
 import "./TrendingCardList.css";
-import UserContext from "../../context/UserContext";
+// import UserContext from "../../context/UserContext";
 import axios from "axios";
 
 const TrendingCardList = () => {
   const [trends, setTrends] = useState(null);
   //   console.log(cardContent)
-  const { articles } = useContext(UserContext);
+  // const { articles } = useContext(UserContext);
 
   useEffect(() => {
     const fetchArticles = async () => {

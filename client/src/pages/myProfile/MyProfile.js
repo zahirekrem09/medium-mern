@@ -6,8 +6,10 @@ import Card from "../../components/card/Card";
 import "./MyProfile.css";
 import MyProfileUpdateForm from "../../components/myProfileUpdateform/MyProfile";
 import Media from "../../components/icons/Media";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const MyProfile = () => {
+  const size = useWindowSize();
   const [userProfile, setUserProfile] = useState(null);
   const [imgAvatar, setImgAvatar] = useState(null);
   const [disabled, setDisabled] = useState(null);
@@ -60,6 +62,18 @@ const MyProfile = () => {
     );
     setUserData({ ...userData, user: registerResponse.data.user });
   };
+  const customStyles = {
+    content: {
+      width: size.width > 768 && "35%",
+      height: "auto",
+      top: "45%",
+      left: "45%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
 
   return (
     <div className="profileContainer">
@@ -67,6 +81,7 @@ const MyProfile = () => {
         isOpen={showProfileModal}
         onRequestClose={handleOnUpdateClose}
         style={customStyles}
+        // className="modal_content"
       >
         <MyProfileUpdateForm
           handleOnUpdateClose={handleOnUpdateClose}
@@ -176,16 +191,3 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
-
-const customStyles = {
-  content: {
-    width: "35%",
-    height: "auto",
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};

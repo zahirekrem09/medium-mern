@@ -69,9 +69,9 @@ const ProfilDetail = () => {
               {userProfile?.followersCount} Followers
             </span>
           </Link>
-          <Link>
+          {/* <Link>
             <span>About</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="profil__card__content">
